@@ -26,7 +26,8 @@ if os.path.isfile(dotenv_file):
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '%rjk5gucvo4mp@k7p-flfcjpl@2-(a0#52a2=-x8%0gi7r0b94'
+SECRET_KEY = os.environ['SECRET_KEY']
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -143,3 +144,4 @@ if 'ON_HEROKU' in os.environ:
     PROXY_SERVER = str(os.environ['PROXY_SERVER'])
     SERVER_TWO = str(os.environ['SERVER_TWO'])
     SERVER_THREE = str(os.environ['SERVER_THREE'])
+    SERVER_FOUR = str(os.environ['SERVER_FOUR'])

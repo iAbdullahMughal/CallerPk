@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-from callerpk.settings import SERVER_TWO
+from callerpk.settings import SERVER_TWO, SERVER_FOUR
 
 
 class SimLocation:
@@ -46,7 +46,7 @@ class SimLocation:
             try:
                 headers = {'User-Agent': 'Mozilla/5.0'}
                 payload = {'code': code, 'num': num, 'n': 'PKtech', 'send.x': '131', 'send.y': '31'}
-                response = requests.post('http://charagh.com/mobile-directory/index.php', headers=headers, data=payload)
+                response = requests.post(SERVER_FOUR, headers=headers, data=payload)
                 soup = BeautifulSoup(response.content, 'html.parser')
                 data = soup.findAll("center")[0]
                 content = str(data.get_text()).split('is ')[1]
