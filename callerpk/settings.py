@@ -139,7 +139,7 @@ SERVER_THREE = ''
 
 if 'ON_HEROKU' in os.environ:
     django_heroku.settings(locals())
-    SERVER_ONE = os.environ['SERVER_ONE']
-    PROXY_SERVER = os.environ['PROXY_SERVER']
-    SERVER_TWO = os.environ['SERVER_TWO']
-    SERVER_THREE = os.environ['SERVER_THREE']
+    SERVER_ONE = str(os.environ['SERVER_ONE'])
+    PROXY_SERVER = str(os.environ['PROXY_SERVER'])
+    SERVER_TWO = str(os.environ['SERVER_TWO'])
+    SERVER_THREE = str(os.environ['SERVER_THREE'])
