@@ -27,26 +27,16 @@ class ContactData:
             'last_name': None,
         }
         try:
-            print(SERVER_ONE)
-
             if not len(self.__MOBILE_NUMBER__) == 10:
                 return False, None
-         
+
             payload = {'cnnum': self.__MOBILE_NUMBER__}
             headers = {
                 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36'
                               ' (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'}
 
-            proxies = GetProxy.gen_proxy()
-            print(proxies)
-            if not proxies or use_proxy:
-                print(SERVER_ONE)
-                response = requests.post(SERVER_ONE, headers=headers,
-                                         data=payload)
-            else:
-                response = requests.post(SERVER_ONE, headers=headers,
-                                         data=payload,
-                                         proxies=proxies)
+            response = requests.post('"' + SERVER_ONE + '"', headers=headers,
+                                     data=payload)
 
             soup = BeautifulSoup(response.content, 'html.parser')
             table = soup.find(lambda tag: tag.name == 'table')
@@ -110,4 +100,3 @@ class ContactData:
         except:
             pass
         return self.__request__()
-
