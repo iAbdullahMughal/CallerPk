@@ -22,7 +22,6 @@ dotenv_file = os.path.join(BASE_DIR, ".env")
 if os.path.isfile(dotenv_file):
     dotenv.load_dotenv(dotenv_file)
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
@@ -33,8 +32,9 @@ SECRET_KEY = '%rjk5gucvo4mp@k7p-flfcjpl@2-(a0#52a2=-x8%0gi7r0b94'
 DEBUG = True
 
 # ALLOWED_HOSTS = ['https://callerpk.herokuapp.com/', '127.0.0.1', 'www.callerpk.com', 'callerpk.com']
-ALLOWED_HOSTS = ['*']
 
+ALLOWED_HOSTS = ['www.callerpk.com', 'callerpk.herokuapp.com', 'callerpk.appspot.com', 'callerpk.com', 'caller.pk',
+                 'www.caller.pk', '127.0.0.1']
 
 # Application definition
 
@@ -63,7 +63,6 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 ROOT_URLCONF = 'callerpk.urls'
 
-
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -83,15 +82,13 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'callerpk.wsgi.application'
 
-
 # Database
-DATABASES = {'default':{}}
+DATABASES = {'default': {}}
 
 if 'ON_HEROKU' in os.environ:
     DATABASES['default'].update(dj_database_url.config(conn_max_age=500, ssl_require=True))
 else:
     DATABASES['default'].update(dj_database_url.config())
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -111,7 +108,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
@@ -125,7 +121,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
@@ -137,7 +132,15 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
-
+SERVER_ONE = ''
+PROXY_SERVER = ''
+SERVER_TWO = ''
+SERVER_THREE = ''
 
 if 'ON_HEROKU' in os.environ:
     django_heroku.settings(locals())
+
+    SERVER_ONE = os.environ['SERVER_ONE']
+    PROXY_SERVER = os.environ['PROXY_SERVER']
+    SERVER_TWO = os.environ['SERVER_TWO']
+    SERVER_THREE = os.environ['SERVER_THREE']
