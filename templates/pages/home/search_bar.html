@@ -1,0 +1,36 @@
+{% load static %}
+
+<div class="card card-body p-3 text-center">
+    <div class="text-center">
+        <img src="{% static '/images/logo.svg' %}" style="width: 250px; height: 150px" alt="">
+    </div>
+
+    <div style="  display: table;margin: 0 auto;">
+        <div class="m-0">
+            <form id="request">
+                {% csrf_token %}
+                <div class="form-group">
+                    <div class="input-group">
+                                    <span class="input-group-prepend" id="basic-addon1">
+                                        <span class="input-group-text">+92 Pakistan</span>
+                                    </span>
+                        <input type="text" class="form-control" placeholder="Enter Phone Number"
+                               aria-label="phone_number" id="phone_number" name="phone_number"
+                               aria-describedby="basic-addon1">
+                        <span class="input-group-append">
+                                        <button class="btn btn-dark" type="submit"><i
+                                                class="fe fe-search"></i> </button>
+                                    </span>
+
+                    </div>
+                </div>
+                <div class="form-footer">
+                    <a href="https://www.cognitoforms.com/CallerPK/Form" class="btn btn-primary btn-block"><i
+                            class="fe fe-help-circle"></i>Click More Info </a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+

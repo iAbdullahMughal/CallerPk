@@ -1,0 +1,204 @@
+<div class="row">
+    <div class="col  mx-auto">
+        <div class="text-center mb-6">
+        </div>
+        <div class="card" id="sim_registration_details" style="display: none;">
+            <div class="card-header">
+                <h3 class="card-title"><i class="fe fe-phone-off"></i> Sim Registration Details</h3>
+            </div>
+            <div class="card-body p-6">
+                <div class="row">
+
+                    <div id="div_phone_number" style="display: none" class="col-md-4">
+                        <div class="form-group">
+                            <label class="form-label">Phone Number</label>
+                            <div class="input-icon">
+                            <span class="input-icon-addon">
+                              <i class="fe fe-phone"></i>
+                            </span>
+                                <input type="text" id="user__phone_number" name="user__phone_number"
+                                       class="form-control" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="div_user__name" style="display: none" class="col-sm-6 col-md-4">
+                        <div class="form-group">
+                            <label class="form-label">Name</label>
+                            <div class="input-icon">
+                            <span class="input-icon-addon">
+                              <i class="fe fe-user"></i>
+                            </span>
+                                <input type="text" id="user__name" name="user__name" class="form-control" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="div_reg__date" style="display: none;" class="col-sm-6 col-md-4">
+                        <div class="form-group">
+                            <label class="form-label">Registration Date</label>
+                            <div class="input-icon">
+                            <span class="input-icon-addon">
+                              <i class="fe fe-calendar"></i>
+                            </span>
+                                <input id="reg__date" type="text" class="form-control" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="div_address__one" style="display: none" class="col-md-4">
+                        <div class="form-group">
+                            <label class="form-label">Address</label>
+                            <div class="input-icon">
+                            <span class="input-icon-addon">
+                              <i class="fe fe-map"></i>
+                            </span>
+                                <input id="address__one" type="text" class="form-control" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4" id="div_address__two" style="display: none">
+                        <div class="form-group">
+                            <label class="form-label">Address</label>
+                            <div class="input-icon">
+                            <span class="input-icon-addon">
+                              <i class="fe fe-map"></i>
+                            </span>
+                                <input type="text" id="address__two" class="form-control" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4" id="div_address__three" style="display: none">
+                        <div class="form-group">
+                            <label class="form-label">Address</label>
+                            <div class="input-icon">
+                            <span class="input-icon-addon">
+                              <i class="fe fe-map"></i>
+                            </span>
+                                <input type="text" id="address__three" class="form-control" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4" id="div_city" style="display: none">
+                        <div class="form-group">
+                            <label class="form-label">City</label>
+                            <div class="input-icon">
+                            <span class="input-icon-addon">
+                              <i class="fe fe-map-pin"></i>
+                            </span>
+                                <input type="text" class="form-control" id="city" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4" id="div_other_phone_number" style="display: none">
+                        <div class="form-group">
+                            <label class="form-label">Other Phone Number</label>
+                            <div class="input-icon">
+                            <span class="input-icon-addon">
+                              <i class="fe fe-phone"></i>
+                            </span>
+                                <input type="text" class="form-control" id="other_phone_number" disabled>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="card" id="cnic_info_details" style="display: none">
+            <div class="card-header">
+                <h3 class="card-title"><i class="fe fe-map-pin"></i> Area Details</h3>
+            </div>
+            <div class="card-body p-6">
+                <div class="row">
+                    <div class="col-md-3" id="gander_div">
+                        <div class="form-group">
+                            <label class="form-label">Gander</label>
+                            <div class="input-icon">
+                            <span class="input-icon-addon">
+                              <i class="fe fe-user"></i>
+                            </span>
+                                <input type="text" id="gander" class="form-control" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3" id="tehsil_div" style="display: none">
+                        <div class="form-group">
+                            <label class="form-label">Tehsil</label>
+                            <div class="input-icon">
+                            <span class="input-icon-addon">
+                              <i class="fe fe-map-pin"></i>
+                            </span>
+                                <input type="text" id="tehsil" class="form-control" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3" id="division_div" style="display: none">
+                        <div class="form-group">
+                            <label class="form-label">Division</label>
+                            <div class="input-icon">
+                            <span class="input-icon-addon">
+                              <i class="fe fe-map-pin"></i>
+                            </span>
+                                <input type="text" class="form-control" id="division" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3" id="province_div" style="display: none;">
+                        <div class="form-group">
+                            <label class="form-label">Province</label>
+                            <div class="input-icon">
+                            <span class="input-icon-addon">
+                              <i class="fe fe-map-pin"></i>
+                            </span>
+                                <input type="text" class="form-control" id="province" disabled>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="card" id="sim_code_details" style="display: none">
+            <div class="card-header">
+                <h3 class="card-title"><i class="fe fe-phone-off"></i> Sim Code Details</h3>
+            </div>
+            <div class="card-body p-6">
+                <div class="row">
+
+                    <div class="col-md-4" id="sim_network_div" style="display: none">
+                        <div class="form-group">
+                            <label class="form-label">Network</label>
+                            <div class="input-icon">
+                            <span class="input-icon-addon">
+                              <i class="fe fe-info"></i>
+                            </span>
+                                <input type="text" class="form-control" id="sim_network" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4" id="sim_city_div" style="display: none">
+                        <div class="form-group">
+                            <label class="form-label">City</label>
+                            <div class="input-icon">
+                            <span class="input-icon-addon">
+                              <i class="fe fe-map-pin"></i>
+                            </span>
+                                <input type="text" id="sim_city" class="form-control" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4" id="sim_province_div" style="display: none">
+                        <div class="form-group">
+                            <label class="form-label">Province</label>
+                            <div class="input-icon">
+                            <span class="input-icon-addon">
+                              <i class="fe fe-map-pin"></i>
+                            </span>
+                                <input type="text" class="form-control" id="sim_province" disabled>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

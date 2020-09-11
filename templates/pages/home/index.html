@@ -1,0 +1,45 @@
+{% extends 'layout/style.html' %}
+
+{% load static %}
+{% block javascript %}
+    <link rel="stylesheet" href="{% static 'vendor/toastr/toastr.min.css' %}">
+    <script src="{% static "vendor/jquery/js/bootstrap.bundle.min.js" %}" type="text/javascript"></script>
+    <script src="{% static "vendor/datatables/js/datatables/jquery.dataTables.js" %}" type="text/javascript"></script>
+
+    <script src="{% static "vendor/toastr/toastr.min.js" %}" type="text/javascript"></script>
+    <script src="{% static "vendor/project/search.js" %}" type="text/javascript"></script>
+    <style>
+        /* Start by setting display:none to make this hidden.
+           Then we position it in relation to the viewport window
+           with position:fixed. Width, height, top and left speak
+           for themselves. Background we set to 80% white with
+           our animation centered, and no-repeating */
+        .loadingModal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: rgba(255, 255, 255, .8) url('{% static 'images/FhHRx.gif' %}') 50% 50% no-repeat;
+        }
+
+        /* When the body has the loading class, we turn
+           the scrollbar off with overflow:hidden */
+        body.loading .loadingModal {
+            overflow: hidden;
+        }
+
+        body.loading .loadingModal {
+            display: block;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+
+
+    {% include 'pages/home/search_bar.html' %}
+    {% include 'pages/home/results.html' %}
+
+{% endblock %}

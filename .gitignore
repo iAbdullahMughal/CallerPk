@@ -147,3 +147,5 @@ tmp_list/
 *.sqlite3
 .env
 
+
+staticfiles/

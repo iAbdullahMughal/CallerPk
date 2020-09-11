@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Language" content="en"/>
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="theme-color" content="#4188c9">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="google-signin-client_id"
+          content="1046802078832-k6lmm6q28haq41ovgp0120js7omi04tt.apps.googleusercontent.com">
+    <link rel="icon" href="{% static 'images/icon.ico' %}" type="image/x-icon"/>
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/icon.ico' %}"/>
+
+    <title> Pakistan's Caller ID | CallerPk{% block title %} {% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'vendor/tabler/css/dashboard.css' %}">
+    <script src="{% static "vendor/jquery/js/jquery.min.js" %}" type="text/javascript"></script>
+    <meta name="p:domain_verify" content="94c98151be468a14a913df05bb0e6255"/>
+    {% block javascript %}
+
+    {% endblock %}
+
+    {% block headblock %}
+
+    {% endblock %}
+
+</head>
+<body>
+<div class="page">
+    <div class="flex-fill">
+
+        <div class="header collapse d-lg-flex p-0" id="headerMenuCollapse">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-3 ml-auto">
+                        <form class="input-icon my-3 my-lg-0">
+                           <a class="btn btn-twitter" href="https://twitter.com/CallerPk" title="Join @ Twitter"><i class="fe fe-twitter"></i> </a>
+                           <a class="btn btn-facebook" href="https://facebook.com/CallerPk" title="Join @ Facebook"><i class="fe fe-facebook"></i> </a>
+                           <a class="btn btn-pinterest" href="https://www.pinterest.com/callerpk" title="Join @ Pinterest"><i class="fe fe-image"></i> </a>
+                           <a class="btn btn-instagram" href="https://www.instagram.com/caller.pk" title="Join @ Instagram"><i class="fe fe-instagram"></i> </a>
+                        </form>
+                    </div>
+                    <div class="col-lg order-lg-first">
+
+                        <ul class="nav nav-tabs border-0 flex-column flex-lg-row">
+                            <li class="nav-item">
+                                <a href="{% url 'home_index' %}" class="nav-link active"><i class="fe fe-home"></i> Home</a>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="my-3 my-md-5">
+            <div class="container">
+                {% block content %}
+
+                {% endblock %}
+            </div>
+        </div>
+
+    </div>
+    {% include 'layout/footer.html' %}
+
+</div>
+{% block bodyblock %}
+
+{% endblock %}
+<div class="loadingModal"><!-- Place at bottom of page --></div>
+</body>
+</html>
