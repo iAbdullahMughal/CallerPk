@@ -27,6 +27,8 @@ class ContactData:
             'last_name': None,
         }
         try:
+            print(SERVER_ONE)
+
             if not len(self.__MOBILE_NUMBER__) == 10:
                 return False, None
          
@@ -38,6 +40,7 @@ class ContactData:
             proxies = GetProxy.gen_proxy()
             print(proxies)
             if not proxies or use_proxy:
+                print(SERVER_ONE)
                 response = requests.post(SERVER_ONE, headers=headers,
                                          data=payload)
             else:
